@@ -117,7 +117,7 @@ namespace Atomic
 
         ProcessArguments();
 
-        // Read the engine configuration
+      
         ReadEngineConfig();
 
         context_->RegisterSubsystem(new ScriptSystem(context_));

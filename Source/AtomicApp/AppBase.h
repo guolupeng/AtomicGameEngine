@@ -38,19 +38,19 @@ namespace Atomic
         AppBase(Context* context);
         virtual ~AppBase();
 
-        /// Setup before engine initialization. 
+        /// 引擎初始化前的设置. 
         virtual void Setup();
-        /// Setup after engine initialization. L
+        /// 引擎初始化后的设置.
         virtual void Start();
-        /// Cleanup after the main loop. 
+        /// 主循环后的清理. 
         virtual void Stop();
 
-        /// Run a single frame, return's true if engine is exiting
+        /// 运行一个帧，如果引擎退出，返回true
         bool RunFrame();
 
         virtual void Shutdown() { Stop(); }
 
-        /// Called before initializing application for inserting arguments
+        /// 在初始化应用程序以插入参数之前调用Called before initializing application for inserting arguments
         static void AddArgument(const String& argument);
 
         /// Returns the number of arguments specified on the commandline and added with AddArgument
@@ -67,7 +67,7 @@ namespace Atomic
         static bool GetDebuggerAttached();
 
     protected:
-
+		//读取引擎配置
         void ReadEngineConfig();
 
         static Vector<String> arguments_;

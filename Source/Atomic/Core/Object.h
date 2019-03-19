@@ -287,7 +287,7 @@ public:
     // ATOMIC END
 
 protected:
-    /// Execution context.
+    /// 执行上下文 Execution context.
     Context* context_;
     /// Type info.
     const TypeInfo* typeInfo_;

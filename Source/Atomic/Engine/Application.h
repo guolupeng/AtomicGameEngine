@@ -65,7 +65,7 @@ protected:
     /// Handle log message.
     void HandleLogMessage(StringHash eventType, VariantMap& eventData);
 
-    /// Urho3D engine.
+    /// Urho3DÒıÇæ.
     SharedPtr<Engine> engine_;
     /// Engine parameters map.
     VariantMap engineParameters_;

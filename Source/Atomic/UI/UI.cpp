@@ -284,7 +284,7 @@ void UI::LoadDefaultPlayerSkin()
 
     if (skin == "DefaultUI/skin/skin.tb.txt")
     {
-        AddFont("DefaultUI/fonts/vera.ttf", "Vera");
+        AddFont("DefaultUI/fonts/vera.otf", "Vera");
         SetDefaultFont("Vera", 12);
     }
 }
@@ -302,7 +302,8 @@ void UI::SetDefaultFont(const String& name, int size)
     // Render some glyphs in one go now since we know we are going to use them. It would work fine
     // without this since glyphs are rendered when needed, but with some extra updating of the glyph bitmap.
     if (font)
-        font->RenderGlyphs(" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~•·åäöÅÄÖ");
+        // font->RenderGlyphs(" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~•·åäöÅÄÖ");
+        font->RenderGlyphs("");
 }
 
 void UI::AddFont(const String& fontFile, const String& name)
